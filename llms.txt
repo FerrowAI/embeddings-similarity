@@ -1,0 +1,34 @@
+# embeddings-similarity
+
+> Vector math and in-memory embedding search — cosine/dot/euclidean, normalization, heap-based top-K, k-means-lite.
+
+embeddings-similarity provides the core vector operations agents need when
+working with embeddings: cosine/dot/euclidean distance, L2 normalization,
+top-K nearest-neighbor search using a bounded min-heap (not a full sort, so
+memory stays O(k) not O(n)), batch top-K across multiple queries, and a
+fixed-iteration seeded k-means for lightweight clustering. All comparisons
+throw a typed `DimensionMismatchError` on mismatched vector lengths. This is
+brute-force exact search: fine up to roughly 100k vectors on a single
+machine; beyond that, use a real vector database (pgvector, Pinecone,
+Weaviate, etc). Zero runtime dependencies, strict TypeScript.
+
+## API
+
+- `cosineSimilarity(a: Vector, b: Vector): number`
+- `dot(a: Vector, b: Vector): number`
+- `euclideanDistance(a: Vector, b: Vector): number`
+- `magnitude(a: Vector): number`
+- `normalize(a: Vector): Vector`
+- `topK<T>(query: Vector, vectors: VectorEntry<T>[], k: number, metric?: SimilarityMetric): TopKResult<T>[]`
+- `batchTopK<T>(queries: Vector[], vectors: VectorEntry<T>[], k: number, metric?: SimilarityMetric): TopKResult<T>[][]`
+- `kmeansLite(vectors: Vector[], options: KMeansOptions): KMeansResult`
+- `class DimensionMismatchError extends Error`
+- Types: `Vector`, `SimilarityMetric` ("cosine"|"dot"|"euclidean"), `VectorEntry<T>`, `TopKResult<T>`, `KMeansOptions`, `KMeansResult`
+
+## Install
+
+```
+npm install embeddings-similarity
+```
+
+Part of the Ferrow open-source toolkit: https://github.com/Ruzylo-cloud/ferrow-toolkit — sponsored by https://ferrow.ai
