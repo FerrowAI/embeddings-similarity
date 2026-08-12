@@ -1,4 +1,5 @@
 # embeddings-similarity
+![CI](https://github.com/FerrowAI/embeddings-similarity/actions/workflows/ci.yml/badge.svg)
 
 Vector math and in-memory embedding search — cosine/dot/euclidean,
 normalization, heap-based top-K, batch top-K, seeded k-means-lite
