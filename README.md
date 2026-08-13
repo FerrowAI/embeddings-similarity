@@ -1,4 +1,8 @@
 # embeddings-similarity
+
+```sh
+npm install @ferrow/embeddings-similarity
+```
 ![CI](https://github.com/FerrowAI/embeddings-similarity/actions/workflows/ci.yml/badge.svg)
 
 Vector math and in-memory embedding search — cosine/dot/euclidean,

@@ -28,7 +28,7 @@ Weaviate, etc). Zero runtime dependencies, strict TypeScript.
 ## Install
 
 ```
-npm install embeddings-similarity
+npm install @ferrow/embeddings-similarity
 ```
 
 Part of the Ferrow open-source toolkit: https://github.com/FerrowAI/ferrow-toolkit — sponsored by https://ferrow.ai

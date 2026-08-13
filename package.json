@@ -1,10 +1,12 @@
 {
-  "name": "embeddings-similarity",
+  "name": "@ferrow/embeddings-similarity",
   "version": "1.0.0",
   "description": "Vector math and in-memory embedding search — cosine/dot/euclidean, normalization, heap-based top-K, batch top-K, seeded k-means-lite clustering. Zero runtime dependencies.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "tsc -p tsconfig.json",
     "demo": "npm run build && node examples/demo.js"
@@ -21,7 +23,9 @@
   ],
   "author": "Ruzylo-cloud",
   "license": "MIT",
-  "engines": { "node": ">=18" },
+  "engines": {
+    "node": ">=18"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Ruzylo-cloud/embeddings-similarity.git"
